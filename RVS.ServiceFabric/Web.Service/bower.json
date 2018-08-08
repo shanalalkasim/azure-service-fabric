@@ -1,0 +1,12 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "bootstrap-css-only": "v3.3.7",
+    "angular": "bower-angular#v1.7.2",
+    "angular-cookies": "v1.6.4"
+  },
+  "resolutions": {
+    "angular": "v1.7.2"
+  }
+}

@@ -1,0 +1,46 @@
+﻿<body ng-controller="testController"  data-ng-init="initIndex()">
+    <div class="masthead">
+        <div class="container">
+            <p style="text-align:right;"><h7><b>RVS</b></h7></p><br />
+        </div>
+    </div>
+
+    <div class="container below" ng-init="showStatus=false">
+        <p style="text-align:center; font-size:34px"><b>Admin Portal!</b></p>
+        <br />
+        <p style="text-align:center; font-size:20px"><b>Existing Stocks</b></p>
+        <br />
+        <table class="table table-striped" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Available</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in inventory">
+                    <td>{{row.description}}</td>
+                    <td>${{row.price}}</td>
+                    <td>{{row.customerAvailableStock}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align:center; font-size:18px"><b>Add New Stocks</b></p>
+        <br /> <br />
+
+        Description, Price, Number, Reorder Threshold, Max <br />
+        jeans, 14.99, 2000, 200, 2000 <br />
+        Skirt, 29.99, 1500, 150, 1500 <br />
+        Trousers, 34.99, 3000, 300, 3000 <br />
+        <textarea cols="50" ng-model="itemsToCreate">
+        </textarea>
+
+        <p style="text-align: center">
+            <button ng-click="createInventory()">Create Inventory</button>
+            <div><b>Submission Result = {{createResult}}</b></div>
+        </p>
+
+        <br />
+    </div>
+</body>
