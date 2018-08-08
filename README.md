@@ -1,0 +1,1 @@
+Simplifying azure service fabric 
